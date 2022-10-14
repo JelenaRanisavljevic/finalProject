@@ -20,7 +20,7 @@ h2 {
 .topnav {
     float:inline-end;
     color: #fdfffb;
-    background-color: #143601;
+    background-color: #37503d;;
     padding:20px
 }
 .topnav a:hover {
@@ -54,11 +54,11 @@ section {
     padding-bottom: 20px;
     margin-left: 20px;
 }
-.light_green {background-color: #AAD576;} 
-.dark_green {background-color: #73A942;} 
+.light_green {background-color: #79ac85;;} 
+.dark_green {background-color: #235c31;;} 
 .shopNowButton {
     border-radius: 10px;
-    background-color: #538D22;
+    background-color: #37503d;;
     color: #ffffff;
     margin-top: 20px;
     padding: 20px;
@@ -73,40 +73,45 @@ section {
     padding-bottom: 15px;
     margin-top: 39px;
     padding-right: 100px;
-    background-color: #245501;
+    background-color: #37503d;;
     color: #ffffff;
 }
 .subscribe_button {
     border-radius: 28px;
     padding-left: 50px;
     padding-right: 50px;
-    background-color: #538D22;
+    background-color: #37503d;;
     color: #ffffff;
 
 
 }
                     /***********hero image*********/
-.container {
-    position: relative;
-    background-size: cover;
+    .hero-image {
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("heroimage.jpg");
+                      
+    /* Set a specific height */
+    height: 350px;
+                      
+     /* Position and center the image to scale nicely on all screens */
     background-position: center;
-    padding: 0;
-    margin: 0
-}
-.hero_image {
-    width: 100%;
-    height: auto;
-}
-.hero-text {
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    }
+                      
+    /* Place text in the middle of the image */
+    .hero-text {
+    text-align: center;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-}
             /*********About the company****/
+    }
 .about {
-    background-color: #143601; 
+    background-color: #37503d;; 
     color: white;
     padding: 54px;
 }
