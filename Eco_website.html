@@ -4,168 +4,288 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="icons8-oak-tree-64.png">
+    <link rel="icon" type="image/x-icon" href="icons/icons8-oak-tree-64.png">
     <title>Eco-friendly website</title>
     <link rel="stylesheet" type="text/css" href="styling.css">
+    <script>
+             function View() {
+              var x = document.getElementById("products-container");
+            if (x.style.display === "none") {
+             x.style.display = "block";
+            } else {
+             x.style.display = "none";
+            }
+            }
+            function volunteer() {
+              var x = document.getElementById("volunteer-form");
+            if (x.style.display === "none") {
+             x.style.display = "block";
+            } else {
+             x.style.display = "none";
+            }
+            }
+    </script>
 </head>
 <body>
-    <header>
-        <div class="topnav">
-            <a href="#home" class="nav_a">Home</a>
-            <a href="#products" class="nav_a">Products</a>
-            <a href="#newsletter" class="nav_a">Newsletter</a>
-            <a href="#about" class="nav_a">About Us</a>
-            <a href="#moreinfo" class="nav_a">Contact Us</a>
+  <header>
+    <nav class="topnav">
+      <ul>
+          <li><a href="#home" class="nav_a">Home</a></li>
+          <li><a href="#products" class="nav_a">Products</a></li>
+          <li><a href="#newsletter" class="nav_a">Newsletter</a></li>
+          <li><a href="#about" class="nav_a">About Us</a></li>
+          <li><a href="#moreinfo" class="nav_a">Contact Us</a></li>
+      </ul>
+    </nav>
+    <div class="hero-image">
+      <div class="hero-text">
+        <div class="home">
+          <h1>ECO CORNER SHOP</h1>
+          <h2>ECO FRIENDLY PRODUCTS</h2>
+          <button class="shop-now-button">Shop Now</button>
         </div>
-        <div class="hero-image">
-            <div class="hero-text">
-                    <div class="home">
-                    <h1>ECO CORNER SHOP</h1>
-                    <h2>ECO FRIENDLY PRODUCTS</h2>
-                    <button class="shopNowButton">Shop Now</button>
-                    </div>
-            </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="about" id="about">
+      <h2 >More about us</h2>
+      <h3>We are an online shop with a vision! </h3>
+      <p>Besides selling eco-friendly regional products, we are organizing events across the region</p>
+      <p>Do you want to change your lifestyle to a more sustainable one, but don't know where to start? We've got you covered!</p>
+      <p>Join our community of volunteers and start planting trees and participating today!</p>
+      <button class="join" onclick="volunteer()">Join our community of volunteers</button>
+    </section>
+    <section class="volunteer-form" id="volunteer-form">
+      <h3 class="light-green">&#x1F331; Volunteer Form &#x1F331;</h3>
+      <form>
+       <ul class="join-form">
+        <li><label for="fname">First Name :</label>
+            <input type="text" value="" id="fname" name="fname" placeholder="First Name" required>
+        </li>
+        <li><label for="lname">Last Name :</label>
+            <input type="text" value="" id="lname" name="lname" placeholder="Last Name" required></li>
+        <li><label for="email">Your email:</label>
+            <input type="email" value="email" id="email" name="useremail" required></li>
+        <li> <input type="checkbox" checked id="notifications" name="notifications">
+          <label for="notifications">Do you want to recieve notifications?</label></li>
+        <li><label>Join event:</label>
+            <select id="event" required>
+              <option value="" >I want to participate in planting trees</option>
+              <option value="beach-cleanup">I want to participate in cleaning up beaches</option>
+              <option value="charity">I want to help with charity events</option>
+            </select>
+        <li><input class="submit-form-button" type="submit" value="Join"></li>
+      </ul> 
+      <h3 class="light-green">&#x1F331; Volunteer Form &#x1F331;</h3>
+      </form>
+    </section>
+      <div class="options">
+        <table class="table-options">
+          <tr>
+            <th class="light-green">Monthly subscription boxes</th>
+            <th class="dark-green">Learn more about sustainability</th>
+            <th class="light-green">Pick a perfect gift for your loved ones!</th>
+            <th class="dark-green">Work with us!</th>
+          </tr>
+          <tr>
+            <td class="light-green">Subscribe to our carefully designed eco-boxes that come to your doorstep every month, giving you eco-friendly supplies for your everyday needds, and wonderful new surprises every time!</td>
+            <td class="dark-green">Follow our newsletter for new products, information in ecology, and weekly tips on little things that can help you save the planet!</td>
+            <td class="light-green">Browse through our gift page to find gifcards, t-shirts and books to spread awareness and love for our planet! With every purchase, we fund activists and lobbists in their mission to improve our environment</td>
+            <td class="dark-green">Are you a company or an entrepenuer with a clear vision and creative product that helps our environment? Join our tribe!</td>
+            </tr>
+        </table>
+      </div>
+      <section class="products" id="products">
+      <h3 class="top-products">Most popular this week</h3>
+      <div class="row">
+        <div class="column">
+          <div class="product-card">
+            <img class="product-image"  src="productImages/product1.webp" alt="">
+            <h3>Eco-Friendly Product</h3>
+            <p class="price">$19.99</p>
+            <p>Some text about the product..</p>
+            <p><button class="cart-button">Add to Cart</button></p>
+          </div>
         </div>
-    </header>
-    <main>
-        <section class="about" id="about">
-            <h2 >More about us</h2>
-            <h3>We are an online shop with a vision! </h3>
-            <p>Besides selling eco-friendly regional products, we are organizing events across the region</p>
-            <p>Do you want to change your lifestyle to a more sustainable one, but don't know where to start? We've got you covered!</p>
-            <p>Join our community of volunteers and start planting trees and participating today!</p>
-            <button class="productButton">Join our community of volunteers</button>
-        </section>
-        <section class="options">
-            <table class="table_options">
-                <tr>
-                    <th class="light_green">Monthly subscription boxes</th>
-                    <th class="dark_green">Learn more about sustainability</th>
-                    <th class="light_green">Pick a perfect gift for your loved ones!</th>
-                    <th class="dark_green">Work with us!</th>
-                </tr>
-                <tr>
-                    <td class="light_green">Subscribe to our carefully designed eco-boxes that come to your doorstep every month, giving you eco-friendly supplies for your everyday needds, and wonderful new surprises every time!</td>
-                    <td class="dark_green">Follow our newsletter for new products, information in ecology, and weekly tips on little things that can help you save the planet!</td>
-                    <td class="light_green">Browse through our gift page to find gifcards, t-shirts and books to spread awareness and love for our planet! With every purchase, we fund activists and lobbists in their mission to improve our environment</td>
-                    <td class="dark_green">Are you a company or an entrepenuer with a clear vision and creative product that helps our environment? Join our tribe!</td>
-                </tr>
-
-            </table>
-        </section>
-        <section class="newsletter" id="newsletter">
-            <h2>Subscribe to our Newsletter</h2>
-            <p>for weekly updates on products, discounts, tips and more!</p>
-            <form>
-                <input type="text" value="" id="fname" name="fname" placeholder="Name">
-                <input type="email" value="Email" id="email" name="useremail">
-                <input class="subscribe_button" type="submit" value="Subscribe">
-            </form>
-        </section>
-        <section class="products" id="products">
-            <div class="row">
-                <div class="column">
-                  <div class="card">
-                    <img src="product1.webp" alt="" style="width:100%">
-                    <h1>Eco-Friendly Product</h1>
-                    <p class="price">$19.99</p>
-                    <p>Some text about the product..</p>
-                    <p><button>Add to Cart</button></p>
-                  </div>
-                </div>
-                <div class="column">
-                    <div class="card">
-                      <img src="product2.webp" alt="" style="width:100%">
-                      <h1>Eco-Friendly Product</h1>
-                      <p class="price">$19.99</p>
-                      <p>Some text about the product..</p>
-                      <p><button>Add to Cart</button></p>
-                    </div>
-                  </div>
-                  <div class="column">
-                    <div class="card">
-                      <img src="product3.webp" alt="" style="width:100%">
-                      <h1>Eco-Friendly Product</h1>
-                      <p class="price">$19.99</p>
-                      <p>Some text about the product..</p>
-                      <p><button>Add to Cart</button></p>
-                    </div>
-                  </div>
-                  <div class="column">
-                    <div class="card">
-                      <img src="product4.jpg" alt="" style="width:100%">
-                      <h1>Eco-Friendly Product</h1>
-                      <p class="price">$19.99</p>
-                      <p>Some text about the product..</p>
-                      <p><button>Add to Cart</button></p>
-                    </div>
-                  </div>
-                  <div class="column">
-                    <div class="card">
-                      <img src="product1.webp" alt="" style="width:100%">
-                      <h1>Eco-Friendly Product</h1>
-                      <p class="price">$19.99</p>
-                      <p>Some text about the product..</p>
-                      <p><button>Add to Cart</button></p>
-                    </div>
-                  </div>
-                  <div class="column">
-                    <div class="card">
-                      <img src="product4.jpg" alt="" style="width:100%">
-                      <h1>Eco-Friendly Product</h1>
-                      <p class="price">$19.99</p>
-                      <p>Some text about the product..</p>
-                      <p><button>Add to Cart</button></p>
-                    </div>
-                  </div>
-                  <div class="column">
-                    <div class="card">
-                      <img src="product3.webp" alt="" style="width:100%">
-                      <h1>Eco-Friendly Product</h1>
-                      <p class="price">$19.99</p>
-                      <p>Some text about the product..</p>
-                      <p><button>Add to Cart</button></p>
-                    </div>
-                  </div>
-                  <div class="column">
-                    <div class="card">
-                      <img src="product2.webp" alt="" style="width:100%">
-                      <h1>Eco-Friendly Product</h1>
-                      <p class="price">$19.99</p>
-                      <p>Some text about the product..</p>
-                      <p><button>Add to Cart</button></p>
-                    </div>
-                  </div>
+        <div class="column">
+          <div class="product-card">
+            <img  class="product-image" src="productImages/product2.webp" alt="">
+            <h3>Eco-Friendly Product</h3>
+            <p class="price">$19.99</p>
+            <p>Some text about the product..</p>
+            <p><button class="cart-button">Add to Cart</button></p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="product-card">
+            <img class="product-image" src="productImages/product3.webp" alt="" >
+            <h3>Eco-Friendly Product</h3>
+            <p class="price">$19.99</p>
+            <p>Some text about the product..</p>
+            <p><button class="cart-button">Add to Cart</button></p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="product-card">
+            <img class="product-image"  src="productImages/product4.jpg" alt="">
+            <h3>Eco-Friendly Product</h3>
+            <p class="price">$19.99</p>
+            <p>Some text about the product..</p>
+            <p><button class="cart-button">Add to Cart</button></p>
+          </div>
+        </div>
+      </div>
+      </section>
+      <button class="view-all" onclick="View()">View all products</button>
+      <div id="products-container" class="products-container">
+        <div class="row">
+          <div class="column">
+            <div class="product-card">
+            <img class="product-image" src="productImages/product1.webp" alt="">
+            <h3>Eco-Friendly Product</h3>
+            <p class="price">$19.99</p>
+            <p>Some text about the product..</p>
+            <p><button class="cart-button">Add to Cart</button></p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="product-card">
+            <img class="product-image"  src="productImages/product2.webp" alt="">
+            <h3>Eco-Friendly Product</h3>
+            <p class="price">$19.99</p>
+            <p>Some text about the product..</p>
+            <p><button class="cart-button">Add to Cart</button></p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="product-card">
+            <img class="product-image"  src="productImages/product3.webp" alt="">
+            <h3>Eco-Friendly Product</h3>
+            <p class="price">$19.99</p>
+            <p>Some text about the product..</p>
+            <p><button class="cart-button">Add to Cart</button></p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="product-card">
+            <img class="product-image"  src="productImages/product4.jpg" alt="">
+            <h3>Eco-Friendly Product</h3>
+            <p class="price">$19.99</p>
+            <p>Some text about the product..</p>
+            <p><button class="cart-button">Add to Cart</button></p>
+          </div>
+        </div>
+          <div class="column">
+          <div class="product-card">
+            <img class="product-image"  src="productImages/product5.jpg" alt="">
+            <h3>Eco-Friendly Product</h3>
+            <p class="price">$19.99</p>
+            <p>Some text about the product..</p>
+            <p><button class="cart-button">Add to Cart</button></p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="product-card">
+            <img class="product-image"  src="productImages/product6.webp" alt="">
+            <h3>Eco-Friendly Product</h3>
+            <p class="price">$19.99</p>
+            <p>Some text about the product..</p>
+            <p><button class="cart-button">Add to Cart</button></p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="product-card">
+            <img class="product-image"  src=productImages/product7.webp alt="">
+            <h3>Eco-Friendly Product</h3>
+            <p class="price">$19.99</p>
+            <p>Some text about the product..</p>
+            <p><button class="cart-button">Add to Cart</button></p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="product-card">
+            <img class="product-image"  src="productImages/product8.webp" alt="">
+            <h3>Eco-Friendly Product</h3>
+            <p class="price">$19.99</p>
+            <p>Some text about the product..</p>
+            <p><button class="cart-button">Add to Cart</button></p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="product-card">
+            <img class="product-image"  src="productImages/product9.webp" alt="">
+            <h3>Eco-Friendly Product</h3>
+            <p class="price">$19.99</p>
+            <p>Some text about the product..</p>
+            <p><button class="cart-button">Add to Cart</button></p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="product-card">
+            <img class="product-image"  src="productImages/product10.webp" alt="">
+            <h3>Eco-Friendly Product</h3>
+            <p class="price">$19.99</p>
+            <p>Some text about the product..</p>
+            <p><button class="cart-button">Add to Cart</button></p>
+          </div>
+        </div>
+          <div class="column">
+            <div class="product-card">
+              <img class="product-image"  src="productImages/product11.jpg" alt="">
+              <h3>Eco-Friendly Product</h3>
+              <p class="price">$19.99</p>
+              <p>Some text about the product..</p>
+              <p><button class="cart-button">Add to Cart</button></p>
             </div>
-        </section>
-    </main>
-    <footer>
-        <section class="social_links">
-            <h3><i>Follow us on Social Networks:</i></h3>
-            <a href="https://www.facebook.com/" target="_blank"><img src="fbicon.jpg" alt="Facebook Icon" width="100" height="100"></a>
-            <a href="https://www.instagram.com/" target="_blank"><img src="instaicon.jpg" alt="Instagram Icon" width="100" height="100"></a>
-            <a href="https://www.twitter.com/" target="_blank"><img src="twicon.jpg" alt="twitter Icon" width="100" height="100"></a>
-        </section>
-        <section class="moreInfo" id="moreinfo">
-            <table class="table_info">
-                <tr>
-                    <th>About us:</th> 
-                    <th>Who we work with:</th>
-                    <th>Contact us:</th>
-                </tr>
-                <tr>
-                    <td>Our Mission</td>
-                    <td>Companies</td>
-                    <td>321-555-5555</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Work with us!</td>
-                    <td>Entrepenuers</td>
-                    <td>info@ecocompany.com</td>
-                </tr>
-            </table>
-        </section>
-    </footer>
+         </div>
+        </div>
+      </div>
+    <section class="newsletter" id="newsletter">
+      <h2>Subscribe to our Newsletter</h2>
+      <p>for weekly updates on products, discounts, tips and more!</p>
+      <form>
+        
+        <input class="subscribe-text" type="text" value="" id="subfname" name="fname" placeholder="Name">
+        <input class="subscribe-email" type="email" value="" id="subemail" name="useremail">
+        <input class="subscribe-button" type="submit" value="Subscribe">
+        
+      </form>
+    </section>
+  </main>
+  <footer>
+      <section class="social-links">
+        <h3><i>Follow us on Social Networks:</i></h3>
+        <a href="https://www.facebook.com/" target="_blank"><img src="icons/fbicon.jpg" alt="Facebook Icon" width="100" height="100"></a>
+        <a href="https://www.instagram.com/" target="_blank"><img src="icons/instaicon.jpg" alt="Instagram Icon" width="100" height="100"></a>
+        <a href="https://www.twitter.com/" target="_blank"><img src="icons/twicon.jpg" alt="twitter Icon" width="100" height="100"></a>
+      </section>
+      <section class="more-info" id="moreinfo">
+        <div class="column-info">
+          <div class="card-info">
+            <img src="icons/aboutIcon.jpg" alt="" style="width:33%">
+            <h3>About us:</h3>
+            <p>Our mission</p>
+            <p>Our events</p>
+          </div>
+        </div>
+      <div class="column-info">
+        <div class="card-info">
+          <img src="icons/afiliatesIcon.png" alt="" style="width:33%">
+          <h3>Who we work with:</h3>
+          <p>Companies</p>
+          <p>Entrepeneuers</p>
+        </div>
+      </div>
+      <div class="column-info">
+        <div class="card-info">
+          <img src="icons/contactIcon.png" alt="" style="width:33%">
+          <h3>Contact us:</h3>
+          <p>phone number 55-558</p>
+          <p>email: ecocompany@gmail.com</p>
+        </div>
+      </div>
+      </section>
+  </footer>
 </body>
 </html>
