@@ -24,25 +24,75 @@
              x.style.display = "none";
             }
             }
+            function onNavChange(navId) {
+                if (navId == 'home') {
+                document.getElementById('home').style.display = 'block';
+                document.getElementById('about').style.display = 'none';
+                document.getElementById('contact').style.display = 'none';
+                document.getElementById('products').style.display = 'none';
+
+                document.getElementById('nav-home').classList.add("active");
+                document.getElementById('nav-about').classList.remove("active");
+                document.getElementById('nav-contact').classList.remove("active");
+                document.getElementById('nav-products').classList.remove("active");
+            } else if (navId == 'about') {
+                document.getElementById('home').style.display = 'none';
+                document.getElementById('about').style.display = 'block';
+                document.getElementById('contact').style.display = 'none';
+                document.getElementById('products').style.display = 'none';
+
+                document.getElementById('nav-home').classList.remove("active");
+                document.getElementById('nav-about').classList.add("active");
+                document.getElementById('nav-contact').classList.remove("active");
+                document.getElementById('nav-products').classList.remove("active");
+            } else if (navId == 'contact') {
+                document.getElementById('home').style.display = 'none';
+                document.getElementById('about').style.display = 'none';
+                document.getElementById('contact').style.display = 'block';
+                document.getElementById('products').style.display = 'none';
+
+                document.getElementById('nav-home').classList.remove("active");
+                document.getElementById('nav-about').classList.remove("active");
+                document.getElementById('nav-contact').classList.add("active");
+                document.getElementById('nev-products').classList.remove("active");
+            } else if (navId == 'products') {
+                document.getElementById('home').style.display = 'none';
+                document.getElementById('about').style.display = 'none';
+                document.getElementById('contact').style.display = 'none';
+                document.getElementById('products').style.display = 'block';
+
+                document.getElementById('nav-home').classList.remove("active");
+                document.getElementById('nav-about').classList.remove("active");
+                document.getElementById('nav-contact').classList.remove("active");
+                document.getElementById('nav-products').classList.add("active");
+            } }
+            function shopList() {
+              var x = document.getElementById("products");
+            if (x.style.display === "none") {
+             x.style.display = "block";
+             document.getElementById('home').style.display = 'none';
+             document.getElementById('contact').style.display = 'none';
+            } else {
+             x.style.display = "none";
+            }}
     </script>
 </head>
 <body>
   <header>
-    <nav class="topnav">
-      <ul>
-          <li><a href="#home" class="nav_a">Home</a></li>
-          <li><a href="#products" class="nav_a">Products</a></li>
-          <li><a href="#newsletter" class="nav_a">Newsletter</a></li>
-          <li><a href="#about" class="nav_a">About Us</a></li>
-          <li><a href="#moreinfo" class="nav_a">Contact Us</a></li>
+    <nav class="nav">
+      <ul class="nav-list">
+        <li class="nav-item active" onclick="onNavChange('home')" id="nav-home"><a href="#home" class="nav-link">Home</a></li>
+        <li class="nav-item" onclick="onNavChange('products')" id="nav-products"><a href="#products" class="nav-link">Products</a></li>
+        <li class="nav-item" onclick="onNavChange('about')" id="nav-about"><a href="#about" class="nav-link">About</a></li>
+        <li class="nav-item" onclick="onNavChange('contact')" id="nav-contact"><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
     </nav>
-    <div class="hero-image">
+    <div class="hero-image" id="home">
       <div class="hero-text">
-        <div class="home">
+        <div>
           <h1>ECO CORNER SHOP</h1>
           <h2>ECO FRIENDLY PRODUCTS</h2>
-          <button class="shop-now-button">Shop Now</button>
+          <button class="shop-now-button" onclick="shopList(products)">Shop Now</button>
         </div>
       </div>
     </div>
@@ -136,8 +186,8 @@
           </div>
         </div>
       </div>
-      </section>
-      <button class="view-all" onclick="View()">View all products</button>
+      <button id="view-all" class="view-all" onclick="View()">View all products</button>
+    </section>
       <div id="products-container" class="products-container">
         <div class="row">
           <div class="column">
@@ -196,7 +246,7 @@
         </div>
         <div class="column">
           <div class="product-card">
-            <img class="product-image"  src=productImages/product7.webp alt="">
+            <img class="product-image"  src="productImages/product7.webp" alt="">
             <h3>Eco-Friendly Product</h3>
             <p class="price">$19.99</p>
             <p>Some text about the product..</p>
@@ -241,7 +291,7 @@
          </div>
         </div>
       </div>
-    <section class="newsletter" id="newsletter">
+    <section class="newsletter" id="contact">
       <h2>Subscribe to our Newsletter</h2>
       <p>for weekly updates on products, discounts, tips and more!</p>
       <form>
@@ -260,7 +310,7 @@
         <a href="https://www.instagram.com/" target="_blank"><img src="icons/instaicon.jpg" alt="Instagram Icon" width="100" height="100"></a>
         <a href="https://www.twitter.com/" target="_blank"><img src="icons/twicon.jpg" alt="twitter Icon" width="100" height="100"></a>
       </section>
-      <section class="more-info" id="moreinfo">
+      <section class="more-info">
         <div class="column-info">
           <div class="card-info">
             <img src="icons/aboutIcon.jpg" alt="" style="width:33%">

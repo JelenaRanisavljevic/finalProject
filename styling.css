@@ -34,29 +34,45 @@
         width: 100%;
     }
                 /* *********navigation bar*********/
-    nav li{
-        display: inline;
-        padding-block: 20px;
-        margin-left: 20px;
-        margin-right: 20px;
+     #home {
+        display: block;
     }
-    .topnav {
-        float:inline-end;
-        color: #fdfffb;
-        background-color: #37503d;
-        padding: 20px;
+    #about {
+        display: none;
     }
-    .topnav a:hover {
-        background-color: #57664d;
-        color: #f6f9f4;
-        padding: 15px;
-        transform: scale(2.5);
-        border-radius: 10%;
-        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    #contact {
+        display: none;
     }
-    .nav_a {
-        text-decoration: none;
+    #products {
+        display: none;
+    }
+    header {
+        height: 70px;
+        background-color: #314135;
+    }
+    .nav {
+        height: 100%;
+        line-height: 72px;
+        text-align: center;
+    }
+    .nav-list {
+        height: 100%;
+    }
+    .nav-item {
+        display: inline-block;
+        margin: 0px 4px;
         color: rgb(255, 255, 255);
+        font-size: 24px;
+    }
+    li.active {
+        color: #4d6f55;
+    }
+    .nav-link {
+        text-decoration: none;
+        color: inherit;
+    }
+    .nav-item:hover {
+        color: black;
     }
     section {
         border: #000000;
@@ -111,13 +127,9 @@
         font-size: 16px;
         transition-duration: 0.4s;
     }
-    .shop-now-button :hover {
-        background-color: #245501;
-        color: #79ac85;
-    }
     .top-products {
         font-family: Georgia, 'Times New Roman', Times, serif;
-        font-size: 32px;
+        font-size: 48px;
         color: #235c31;
         padding-top: 30px;
         padding-bottom: 15px;
@@ -154,7 +166,8 @@
          background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("heroimage.jpg");
                       
     /* Set a specific height */
-        height: 350px;
+        height: 730px;
+        width: 100%;
                       
      /* Position and center the image to scale nicely on all screens */
         background-position: center;
@@ -183,6 +196,20 @@
         background-color: #245501;
         color: #f8f8f8;
         }
+    /***hover not working *****//*
+    .products .cart-button .view-all {
+        cursor: pointer;
+    }
+    header button :hover {
+        color: #f1f1f1;
+        background-color: #245501;
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+    .products .cart-button .view-all :hover {
+        color: #f1f1f1;
+        background-color: #245501;
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    }    ////
                 /*************subrscribe form***********/
     .newsletter {
         background-color: rgb(255, 255, 255);
@@ -249,15 +276,17 @@
         text-align: center
     }
     .view-all {
-        background-color: #235c31;
-        color: #f1f1f1;
-        padding-left: 70px;
-        padding-right: 70px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        border-radius: 20px;
+        background-color: rgb(77, 111, 85);
+        color: rgb(241, 241, 241);
+        padding: 20px 150px;
+        border-radius: 30px;
         margin-bottom: 30px;
         margin-top: 30px;
+        font-size: 32px;
+    }
+    .view-all :hover {
+        background-color: #245501;
+        color: #f1f1f1;
     }
     .social-links h3 {
         margin-top: 15px;
